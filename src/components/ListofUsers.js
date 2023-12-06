@@ -31,6 +31,7 @@ function ListOfUsers () {
         try{
             setSelectedUser(user);
             getUsers();
+            window.scrollTo({top: 0, behavior: "smooth"})
         }
         catch{
             console.log('runOnClick function failed')
@@ -46,16 +47,18 @@ function ListOfUsers () {
     }
 
     return (
-        <div className="container-fluid">
+        //The below splits the parent-div between two divs (left and right) the table list displays the current subscribers
+        //and the right side a card is displayed based on the contact selected.
+        <div className="container-fluid" id="master-div">
             <div id="parent-div">
                 <div id="child-div-left">
-                    <table className="table table-hover">
+                    <table className="table table-hover mt-4 rounded-table">
                         <thead>
                             <tr>
-                                <th>Current Users</th>
+                                <th>Current Subscribers</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="table-group-divider">
                             {
                                 users.map(
                                     (user, index) => (
@@ -69,9 +72,8 @@ function ListOfUsers () {
                     </table>
                 </div>
                 <div id="child-div-right">
-                    <p>Card for selected contact should show on the right side.</p>
                     {
-                        selectedUser === ''? <p>Please select a subscriber</p>:
+                        selectedUser === ''? <p style={{fontFamily: 'cursive', fontSize: '35px'}}>Please select a subscriber</p>:
                         <UserCard user={selectedUser} change={handleChange}/>
                     }
                 </div>

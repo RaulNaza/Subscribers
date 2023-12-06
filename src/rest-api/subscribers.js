@@ -4,7 +4,6 @@ const USERS_API = 'https://65453b3e5a0b4b04436dd924.mockapi.io/users';
 
 
 class USERSAPI {
-
     get = async () => {
         try {
             const resp = await fetch(USERS_API)

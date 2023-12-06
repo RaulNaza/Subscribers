@@ -1,13 +1,11 @@
+
 .New-User-Div {
-    display: grid;
     margin: auto;
     margin-bottom: 1rem;
     margin-top: 1rem;
     width: 25%;
-    height: auto;
-    border-style: solid;
-    border-width: thin;
 }
+
 
 h3 {
     text-align: center;
@@ -23,6 +21,10 @@ h3 {
 .update-form {
     font-style: italic;
 }
+#master-div{
+    background: rgb(2,1,20);
+    background: linear-gradient(301deg, rgba(2,1,20,0.6840861344537815) 0%, rgba(67,91,177,0.3619572829131653) 60%, rgba(255, 255, 255, 0.312) 100%);
+}
 
 #parent-div{
     display: flex;
@@ -31,12 +33,20 @@ h3 {
 #child-div-left{
     float: left;
     width: 20%;
+    border-radius: 10px;
 }
 
 #child-div-right{
     float: right;
     width: 80%;
-    margin-left: 20rem;
+    margin-left: 30rem;
+    margin-top: 1rem;
+}
+
+.rounded-table{
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 1rem;
 }
 
 th{
