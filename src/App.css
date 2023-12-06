@@ -23,3 +23,26 @@ h3 {
 .update-form {
     font-style: italic;
 }
+
+#parent-div{
+    display: flex;
+}
+
+#child-div-left{
+    float: left;
+    width: 20%;
+}
+
+#child-div-right{
+    float: right;
+    width: 80%;
+    margin-left: 20rem;
+}
+
+th{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+td{
+    font-family: monospace;
+}
